@@ -1,0 +1,18 @@
+<h1 style="text-align: center">{{firstname|uppercase}} </h1>
+<a routerLink="/zhang">element UI</a>
+<div >
+  <button  (click)="changeName()">点击事件{{firstname}}</button>
+  <div  [class.awesome]="my">动态添加样式{{msg}}</div>
+  <ul *ngIf="my">
+    <li *ngFor="let item of msg" (click)="changeName()">遍历数据{{item}}</li>
+  </ul>
+  <span>双向绑定：</span><input type="text"  [(ngModel)]="heros">
+  <p>{{heros}}</p>
+</div>
+<input type="text" [value]="firstname" >
+
+
+<!--//当英雄相同时显示样式-->
+<!--[class.selected]="hero === selectedHero"-->
+
+
